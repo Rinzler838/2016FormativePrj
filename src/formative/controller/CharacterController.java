@@ -1,7 +1,7 @@
 package formative.controller;
 
 import formative.model.MajorStatus;
-//import formative.view.CharacterView;
+import formative.view.CharacterView;
 
 /**
  * Application controller for 2016Formative project.
@@ -11,20 +11,19 @@ import formative.model.MajorStatus;
 
 public class CharacterController
 {
-	private MajorStatus myMS;
+	private MajorStatus formativeMS;
 	public String twoCharacters;
-	//private CharacterView myDisplay;
+	private CharacterView formativeDisplay;
 	
 	public CharacterController()
 	{
-		myDisplay = new CharacterView();
-		String twoCharacters = myDisplay.characterInput("Please enter your 2 characters (A letter & a number) to continue...");
-		myMS = new MajorStatus(twoCharacters);
+		formativeDisplay = new CharacterView();
+		formativeMS = new MajorStatus();
 	}
 	
 	public void start()
 	{
-		System.out.println("Translation: " + myMS.getTranslation());
-		//myDisplay.showMessage("Translation: " + myMS.getTranslation());
+		String twoCharacters = formativeDisplay.characterInput("Please input your two characters to continue...");
+		formativeDisplay.showMessage("Translation: " + formativeMS.getTranslation(twoCharacters));
 	}
 }
