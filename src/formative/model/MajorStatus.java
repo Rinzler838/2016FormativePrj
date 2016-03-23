@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * MajorStatus Model class
  * @author Deigen Villalobos
- * @version 1.9 3/23/16 Fixed code in for loops.
+ * @version 1.9 3/23/16 Added code to handle errors.
  */
 
 public class MajorStatus
@@ -61,13 +61,13 @@ public class MajorStatus
 				}
 				else
 				{
-					major = "(Error 404: Character Not Found";
+					major = "Error 404: Major Not Found/";
 				}
 			}
 		}
 		else
 		{
-			major = "(Error Code 414: Too long of entry";
+			major = "Error Code 413: Too long of entry";
 		}
 		return major;
 	}
@@ -84,13 +84,13 @@ public class MajorStatus
 				}
 				else
 				{
-					status = " - Please Try Again)";
+					status = "Error Code 404: Status Not Found";
 				}
 			}
 		}
 		else
 		{
-			status = " - Please Try Again)";
+			status = " - Please Try Again";
 		}
 		return status;
 	}
@@ -103,6 +103,10 @@ public class MajorStatus
 		if (major != null && status != null)
 		{
 			translation = major + status;
+		}
+		else
+		{
+			translation = "Error Code 502: Critical Program Failure";
 		}
 		return translation;
 	}
