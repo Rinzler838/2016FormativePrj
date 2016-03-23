@@ -67,17 +67,17 @@ public class MajorStatus
 			{
 				if (twoCharacters.substring(0, 1).equals(majorList.get(currentMajor).substring(0, 1)))
 				{
-					major = majorList.get(currentMajor);
+					return major = majorList.get(currentMajor);
 				}
 				else
 				{
-					major = "Error 404: Major Not Found/";
+					major = "Error 404: Major Not Found - ";
 				}
 			}
 		}
 		else
 		{
-			major = "Error Code 413: Too long of entry";
+			major = "Error Code 413: Too Long of Entry";
 		}
 		return major;
 	}
@@ -95,7 +95,7 @@ public class MajorStatus
 			{
 				if (twoCharacters.substring(1, 2).equals(statusList.get(currentStatus).substring(0, 1)))
 				{
-					status = statusList.get(currentStatus).substring(1, statusList.get(currentStatus).length());
+					return status = statusList.get(currentStatus).substring(1, statusList.get(currentStatus).length());
 				}
 				else
 				{
