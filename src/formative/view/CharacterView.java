@@ -3,9 +3,9 @@ package formative.view;
 import javax.swing.JOptionPane;
 
 /**
- * View class that allows for different window types
+ * View class that defines display types for the project
  * @author Deigen Villalobos
- * @version 1.2 3/23/16 Added code for showMessage
+ * @version 1.2 3/23/16 Added code for showMessage.
  */
 
 public class CharacterView
@@ -18,9 +18,9 @@ public class CharacterView
 	}
 	
 	/**
-	 * Displays a GUI popup for collecting user text with the supplied String.
-	 * @param myDisplay The text to show in the popup window. 
-	 *  @return The text supplied by the user.
+	 * Displays a window for collecting user text with the supplied String.
+	 * @param displayText: The text to show in the window. 
+	 *  @return userInput: The text supplied by the user.
 	 */	
 	public String characterInput(String displayText)
 	{
@@ -30,8 +30,8 @@ public class CharacterView
 	}
 	
 	/**
-	 * Displays a String to the user with a standard popup.
-	 * @param myDisplay The supplied text to be displayed.
+	 * Displays a String to the user with a standard window.
+	 * @param formativeDisplay: The supplied text to be displayed.
 	 */	
 	public void showMessage(String formativeDisplay)
 	{

@@ -21,6 +21,9 @@ public class CharacterController
 		formativeMS = new MajorStatus();
 	}
 	
+	/**
+	 * Collects user text and returns the translation.
+	 */
 	public void start()
 	{
 		String twoCharacters = formativeDisplay.characterInput("Please input your two characters to continue...");

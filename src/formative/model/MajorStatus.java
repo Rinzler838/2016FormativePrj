@@ -17,7 +17,6 @@ public class MajorStatus
 	private String twoCharacters;
 	public String translation;
 	
-	
 	public MajorStatus()
 	{
 		this.majorList = new ArrayList<String>();
@@ -28,6 +27,9 @@ public class MajorStatus
 		buildStatusList();
 	}
 	
+	/**
+	 * Builds the ArrayList that contains majors.
+	 */
 	private void buildMajorList()
 	{
 		this.majorList.add("Network Secutiry - ");
@@ -41,6 +43,9 @@ public class MajorStatus
 		this.majorList.add("Information Technology - ");
 	}
 	
+	/**
+	 * Builds the ArrayList that contains statuses.
+	 */
 	private void buildStatusList()
 	{
 		this.statusList.add("1Freshman");
@@ -49,6 +54,11 @@ public class MajorStatus
 		this.statusList.add("4Senior");
 	}	
 	
+	/**
+	 * If it is 2 characters long, this checks to see if "twoCharacters" can match a major in the MajorList.
+	 * @param twoCharacters: The user's supplied text
+	 * @return major: The major from the list that corresponds to what the user typed in.
+	 */
 	public String majorChecker(String twoCharacters)
 	{
 		if (twoCharacters.length() == 2)
@@ -72,6 +82,11 @@ public class MajorStatus
 		return major;
 	}
 	
+	/**
+	 * If it is 2 characters long, this checks to see if "twoCharacters" can match a status in the StatusList.
+	 * @param twoCharacters: The user's supplied text.
+	 * @return status: The status from the list that corresponds to that the user typed in.
+	 */
 	public String statusChecker(String twoCharacters)
 	{
 		if (twoCharacters.length() == 2)
@@ -95,6 +110,11 @@ public class MajorStatus
 		return status;
 	}
 	
+	/**
+	 * If both are not "null", it takes the returned major and status and combines them into one String and returns it.
+	 * @param twoCharacters: The user's supplied text.
+	 * @return translation: The final and translated text.
+	 */
 	public String getTranslation(String twoCharacters)
 	{
 		majorChecker(twoCharacters);
